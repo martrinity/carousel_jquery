@@ -1,1 +1,30 @@
-style.css
+*{
+	margin: 0;
+	padding: 0;
+}
+
+ul li{
+	float:left;
+	list-style: none;
+	position: relative;
+}
+
+ul li a{
+	text-indent: -9999px;
+	outline: none;
+}
+
+ul li a.next{
+	position: absolute;
+	left: 100px;
+}
+
+ul li a.previous{
+	position: absolute;
+	left: 0px;
+}
+
+ul li a.startover{
+	position: absolute;
+	left: 200px;
+}
