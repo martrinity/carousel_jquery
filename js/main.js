@@ -1,43 +1,12 @@
-$(document).ready(function() {
-	var theimagen = $("ul li img");
-	var thewidth = imagen.width();
+// Activate Carousel
+$("#carousel-animal").carousel();
 
-	$("ul").wrap("<div id='contenedor' />");
-	//div envolvera a cada ul
-	$("#contenedor").css({//estilos desde js
-		width: function(){
-			return thewidth;
-		},
-		height: function(){
-			return theimage.height();
-		},
-		position: "relative",
-		overflow: "hidden"
-	});
+// Enable Carousel Indicators
+$(".item").click(function(){
+    $("#carousel-animal").carousel(1);
+});
 
-	var widthTotal =theimage.length *thewidth;
-	$("ul").css({
-		width: function(){
-			reeturn widthTotal;
-		}
-	});
-	
-	$(theimage).each(
-		function(index){
-			$(this).nextAll("a").blind("click", function(){
-				if($(this).is(".next")){
-					$(this).parent("li").parent("ul").animate({
-						"margin-left" : (-(index + 1)* thewidth)
-					}, 2000)
-				} else if($(this).is(".previous")){
-					$(this).parent("li").parent("ul").animate({
-						"margin-left" : (-(index - 1)* thewidth)
-					}, 2000)
-				}else if($(this).is(".startover")){
-					$(this).parent("li").parent("ul").animate({
-						"margin-left" : (0)
-					}, 2000)
-				}
-			});
-		});
+// Enable Carousel Controls
+$(".left").click(function(){
+    $("#carousel-animal").carousel("prev");
 });

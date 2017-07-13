@@ -3,28 +3,32 @@
 	padding: 0;
 }
 
-ul li{
-	float:left;
-	list-style: none;
-	position: relative;
+body{
+	height: 900px;
+	background: linear-gradient(135deg, rgba(241,231,103,1) 0%, rgba(255,84,167,1) 100%);
+	background-repeat: no-repeat;
+	background-size: cover;
+
 }
 
-ul li a{
-	text-indent: -9999px;
-	outline: none;
+header{
+	padding: 35px 0;
+	
+}
+header h1{
+	color: black;
+	font-size: 30px;
+	font-weight: bolder;
 }
 
-ul li a.next{
-	position: absolute;
-	left: 100px;
+.center-block {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-ul li a.previous{
-	position: absolute;
-	left: 0px;
-}
-
-ul li a.startover{
-	position: absolute;
-	left: 200px;
-}
+.carousel-inner > .item > img,
+  .carousel-inner > .item > a > img {
+      width: 70%;
+      margin: auto;
+  }
